@@ -1,3 +1,4 @@
+from typing import List, Dict
 from datetime import datetime
 
 from aiogoogle import Aiogoogle
@@ -44,7 +45,7 @@ async def set_user_permissions(
 
 async def spreadsheets_update_value(
         spreadsheetid: str,
-        projects: list,
+        projects: List[Dict[str, str]],
         wrapper_services: Aiogoogle
 ) -> None:
     now_date_time = datetime.now().strftime(FORMAT)

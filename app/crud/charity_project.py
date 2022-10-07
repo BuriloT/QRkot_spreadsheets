@@ -36,7 +36,7 @@ class CRUDCharityProject(CRUDBase):
         for project in projects:
             projects_list.append({
                 'Название проекта': project.name,
-                'Время сбора': project.close_date - project.create_date,
+                'Время сбора': str(project.close_date - project.create_date),
                 'Описание': project.description
             })
         projects_list = sorted(projects_list, key=lambda k: k['Время сбора'])
